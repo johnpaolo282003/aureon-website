@@ -1,4 +1,4 @@
-```css id="u6x3pk"
+id="xq2k8m"
 @import "tailwindcss";
 
 :root {
@@ -16,54 +16,9 @@ html {
 
 body {
   margin: 0;
-  min-height: 100vh;
-  background:
-    radial-gradient(
-      circle at 15% 10%,
-      rgba(197, 170, 122, 0.14),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 85% 20%,
-      rgba(216, 199, 169, 0.14),
-      transparent 32%
-    ),
-    linear-gradient(
-      135deg,
-      #fbfaf7 0%,
-      #f8f7f4 50%,
-      #f1eee8 100%
-    );
+  background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  opacity: 0.16;
-  background-image: radial-gradient(
-    rgba(23, 23, 23, 0.2) 0.5px,
-    transparent 0.5px
-  );
-  background-size: 7px 7px;
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -2;
-  background: radial-gradient(
-    circle at 50% 0%,
-    rgba(255, 255, 255, 0.65),
-    transparent 45%
-  );
 }
 
 a {
@@ -72,28 +27,12 @@ a {
 }
 
 button,
-input,
-textarea,
-select {
+input {
   font: inherit;
-}
-
-img {
-  max-width: 100%;
 }
 
 ::selection {
   background: #d8c7a9;
   color: #171717;
-}
-
-section {
-  scroll-margin-top: 90px;
-}
-
-@media (max-width: 640px) {
-  body::before {
-    opacity: 0.1;
-  }
 }
 ```
