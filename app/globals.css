@@ -1,10 +1,11 @@
+```css
 @import "tailwindcss";
 
 :root {
-  --background: #f7f5f0;
+  --background: #f8f7f4;
   --foreground: #171717;
-  --gold: #a88b5c;
-  --gold-light: #d8c7a9;
+  --gold: #8b7350;
+  --gold-light: #c5aa7a;
 }
 
 * {
@@ -15,101 +16,92 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
 body {
   margin: 0;
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  min-height: 100%;
 }
 
-/* Premium Aureon background texture */
-.premium-texture {
-  position: relative;
-  isolation: isolate;
+body {
   background:
     radial-gradient(
-      circle at 15% 15%,
-      rgba(216, 199, 169, 0.18),
+      circle at 15% 10%,
+      rgba(197, 170, 122, 0.12) 0,
       transparent 28%
     ),
     radial-gradient(
-      circle at 85% 25%,
-      rgba(255, 255, 255, 0.85),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at 50% 90%,
-      rgba(216, 199, 169, 0.12),
+      circle at 85% 20%,
+      rgba(216, 199, 169, 0.14) 0,
       transparent 30%
     ),
-    #f7f5f0;
+    radial-gradient(
+      circle at 50% 85%,
+      rgba(197, 170, 122, 0.08) 0,
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #fbfaf7 0%,
+      #f8f7f4 45%,
+      #f1eee8 100%
+    );
+
+  color: var(--foreground);
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-.premium-texture::before {
+/* Premium subtle texture */
+body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.38;
+  opacity: 0.22;
 
   background-image:
-    repeating-linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.018) 0px,
-      rgba(0, 0, 0, 0.018) 1px,
-      transparent 1px,
-      transparent 4px
+    radial-gradient(
+      rgba(23, 23, 23, 0.16) 0.45px,
+      transparent 0.55px
     ),
-    repeating-linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.35) 0px,
-      rgba(255, 255, 255, 0.35) 1px,
-      transparent 1px,
-      transparent 5px
+    radial-gradient(
+      rgba(139, 115, 80, 0.12) 0.4px,
+      transparent 0.5px
     );
+
+  background-size:
+    7px 7px,
+    11px 11px;
+
+  background-position:
+    0 0,
+    3px 4px;
 }
 
-.premium-texture::after {
+/* Soft luxury light effect */
+body::after {
   content: "";
-  position: absolute;
+  position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: -2;
   pointer-events: none;
 
   background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(255, 255, 255, 0.7),
-      transparent 45%
+    linear-gradient(
+      120deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.45) 45%,
+      transparent 70%
     );
-}
 
-/* Premium glass effect */
-.aureon-glass {
-  background: rgba(255, 255, 255, 0.58);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(23, 23, 23, 0.08);
-}
-
-/* Soft luxury shadow */
-.aureon-shadow {
-  box-shadow:
-    0 25px 70px rgba(23, 23, 23, 0.07),
-    0 4px 18px rgba(23, 23, 23, 0.04);
-}
-
-/* Gold accent line */
-.gold-line {
-  height: 1px;
-  width: 64px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--gold),
-    transparent
-  );
+  opacity: 0.45;
 }
 
 a {
@@ -118,11 +110,63 @@ a {
 }
 
 button,
-input {
+input,
+textarea,
+select {
   font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
 }
 
 ::selection {
   background: #d8c7a9;
   color: #171717;
 }
+
+/* Premium card texture */
+article,
+.standard-card {
+  position: relative;
+}
+
+article::after,
+.standard-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+
+  background-image:
+    radial-gradient(
+      rgba(0, 0, 0, 0.06) 0.4px,
+      transparent 0.5px
+    );
+
+  background-size: 8px 8px;
+  opacity: 0.12;
+}
+
+/* Smooth scrolling sections */
+section {
+  scroll-margin-top: 90px;
+}
+
+/* Better mobile spacing */
+@media (max-width: 640px) {
+  body::before {
+    opacity: 0.16;
+  }
+
+  body::after {
+    opacity: 0.3;
+  }
+}
+```
