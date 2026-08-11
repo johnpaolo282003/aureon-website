@@ -1,6 +1,4 @@
 ```tsx
-"use client";
-
 export default function Home() {
   return (
     <main>
@@ -112,9 +110,7 @@ export default function Home() {
         </p>
 
         <a
-          href="https://www.facebook.com/"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#"
           className="primary-button"
         >
           Contact Aureon
