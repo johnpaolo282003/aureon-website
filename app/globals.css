@@ -1,4 +1,6 @@
-```css
+```css id="u6x3pk"
+@import "tailwindcss";
+
 :root {
   --background: #f8f7f4;
   --foreground: #171717;
@@ -12,14 +14,9 @@ html {
   scroll-behavior: smooth;
 }
 
-html,
 body {
   margin: 0;
-  padding: 0;
-  min-height: 100%;
-}
-
-body {
+  min-height: 100vh;
   background:
     radial-gradient(
       circle at 15% 10%,
@@ -28,7 +25,7 @@ body {
     ),
     radial-gradient(
       circle at 85% 20%,
-      rgba(216, 199, 169, 0.16),
+      rgba(216, 199, 169, 0.14),
       transparent 32%
     ),
     linear-gradient(
@@ -37,50 +34,36 @@ body {
       #f8f7f4 50%,
       #f1eee8 100%
     );
-
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
-
-/* Premium subtle texture */
 
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: -1;
   pointer-events: none;
-
-  opacity: 0.18;
-
-  background-image:
-    radial-gradient(
-      rgba(23, 23, 23, 0.18) 0.5px,
-      transparent 0.5px
-    );
-
+  z-index: -1;
+  opacity: 0.16;
+  background-image: radial-gradient(
+    rgba(23, 23, 23, 0.2) 0.5px,
+    transparent 0.5px
+  );
   background-size: 7px 7px;
 }
-
-/* Soft premium lighting */
 
 body::after {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: -2;
   pointer-events: none;
-
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(255, 255, 255, 0.65),
-      transparent 45%
-    );
-
-  opacity: 0.5;
+  z-index: -2;
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(255, 255, 255, 0.65),
+    transparent 45%
+  );
 }
 
 a {
@@ -93,11 +76,6 @@ input,
 textarea,
 select {
   font: inherit;
-}
-
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
 }
 
 img {
@@ -115,11 +93,7 @@ section {
 
 @media (max-width: 640px) {
   body::before {
-    opacity: 0.12;
-  }
-
-  body::after {
-    opacity: 0.35;
+    opacity: 0.1;
   }
 }
 ```
