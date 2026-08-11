@@ -30,7 +30,9 @@ export default function Home() {
       <section id="products" className="products-section">
         <div className="section-heading">
           <span>THE AUREON COLLECTION</span>
+
           <h2>Precision in Every Detail</h2>
+
           <p>
             Explore the Aureon collection and discover our
             commitment to premium presentation and quality.
@@ -39,21 +41,42 @@ export default function Home() {
 
         <div className="product-grid">
           <div className="product-card">
-            <img src="/Tirzera.png" alt="Tirzera" />
+            <img
+              src="/Tirzera.png"
+              alt="Tirzera"
+            />
+
             <h3>Tirzera</h3>
-            <p>Premium Aureon collection.</p>
+
+            <p>
+              Premium Aureon collection.
+            </p>
           </div>
 
           <div className="product-card">
-            <img src="/Retera.png" alt="Retera" />
+            <img
+              src="/Retera.png"
+              alt="Retera"
+            />
+
             <h3>Retera</h3>
-            <p>Premium Aureon collection.</p>
+
+            <p>
+              Premium Aureon collection.
+            </p>
           </div>
 
           <div className="product-card">
-            <img src="/Aura.png" alt="Aura" />
+            <img
+              src="/Aura.png"
+              alt="Aura"
+            />
+
             <h3>Aura</h3>
-            <p>Premium Aureon collection.</p>
+
+            <p>
+              Premium Aureon collection.
+            </p>
           </div>
         </div>
       </section>
@@ -61,7 +84,9 @@ export default function Home() {
       <section className="standards-section">
         <div className="section-heading">
           <span>THE AUREON STANDARD</span>
+
           <h2>Designed With Purpose</h2>
+
           <p>
             From presentation to experience, Aureon is built
             around a refined and intentional approach.
@@ -71,6 +96,7 @@ export default function Home() {
         <div className="standards-grid">
           <div className="standard-card">
             <h3>Precision</h3>
+
             <p>
               Every detail is carefully considered to create
               a consistent premium experience.
@@ -79,6 +105,7 @@ export default function Home() {
 
           <div className="standard-card">
             <h3>Quality</h3>
+
             <p>
               We believe excellence begins with attention to
               detail and uncompromising standards.
@@ -87,6 +114,7 @@ export default function Home() {
 
           <div className="standard-card">
             <h3>Excellence</h3>
+
             <p>
               Aureon represents a modern approach to premium
               presentation and brand experience.
@@ -124,7 +152,9 @@ export default function Home() {
           className="footer-logo"
         />
 
-        <p>© {new Date().getFullYear()} Aureon. All rights reserved.</p>
+        <p>
+          © {new Date().getFullYear()} Aureon. All rights reserved.
+        </p>
       </footer>
     </main>
   );
