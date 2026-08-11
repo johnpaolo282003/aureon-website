@@ -2,6 +2,7 @@
 export default function Home() {
   return (
     <main>
+      {/* HERO */}
       <section className="hero">
         <img
           src="/aureon-logo.png"
@@ -27,6 +28,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PRODUCTS */}
       <section id="products" className="products-section">
         <div className="section-heading">
           <span>THE AUREON COLLECTION</span>
@@ -40,6 +42,7 @@ export default function Home() {
         </div>
 
         <div className="product-grid">
+          {/* TIRZERA */}
           <div className="product-card">
             <img
               src="/Tirzera.png"
@@ -53,6 +56,7 @@ export default function Home() {
             </p>
           </div>
 
+          {/* RETERA */}
           <div className="product-card">
             <img
               src="/Retera.png"
@@ -66,13 +70,14 @@ export default function Home() {
             </p>
           </div>
 
+          {/* AURÈA */}
           <div className="product-card">
             <img
               src="/Aura.png"
-              alt="Aura"
+              alt="Aurèa"
             />
 
-            <h3>Aura</h3>
+            <h3>Aurèa</h3>
 
             <p>
               Premium Aureon collection.
@@ -81,6 +86,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* AUREON STANDARD */}
       <section className="standards-section">
         <div className="section-heading">
           <span>THE AUREON STANDARD</span>
@@ -123,7 +129,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="contact-section">
+      {/* CONTACT */}
+      <section
+        id="contact"
+        className="contact-section"
+      >
         <img
           src="/aureon-logo.png"
           alt="Aureon"
@@ -138,13 +148,14 @@ export default function Home() {
         </p>
 
         <a
-          href="#"
+          href="mailto:"
           className="primary-button"
         >
           Contact Aureon
         </a>
       </section>
 
+      {/* FOOTER */}
       <footer className="footer">
         <img
           src="/aureon-logo.png"
