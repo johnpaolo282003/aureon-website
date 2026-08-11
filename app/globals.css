@@ -1,4 +1,3 @@
-```css
 @import "tailwindcss";
 
 :root {
@@ -24,10 +23,7 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -46,10 +42,6 @@ input {
   color: #ffffff;
 }
 
-/* =========================
-   HERO
-========================= */
-
 .hero {
   min-height: 100vh;
   display: flex;
@@ -58,22 +50,14 @@ input {
   justify-content: center;
   text-align: center;
   padding: 80px 24px;
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(
-      circle at 50% 35%,
-      rgba(181, 154, 98, 0.12),
-      transparent 35%
-    ),
-    var(--background);
+  background: var(--background);
 }
 
 .logo {
-  width: min(220px, 60vw);
+  width: 220px;
+  max-width: 60vw;
   height: auto;
-  margin-bottom: 38px;
-  object-fit: contain;
+  margin-bottom: 35px;
 }
 
 .eyebrow,
@@ -91,8 +75,8 @@ input {
   max-width: 850px;
   margin: 0;
   font-size: clamp(42px, 7vw, 82px);
-  line-height: 0.98;
-  letter-spacing: -0.045em;
+  line-height: 1;
+  letter-spacing: -0.04em;
   font-weight: 500;
 }
 
@@ -112,10 +96,6 @@ input {
   justify-content: center;
 }
 
-/* =========================
-   BUTTONS
-========================= */
-
 .primary-button,
 .secondary-button {
   display: inline-flex;
@@ -128,37 +108,17 @@ input {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease,
-    color 0.25s ease,
-    border-color 0.25s ease;
 }
 
 .primary-button {
-  background: var(--foreground);
+  background: #171717;
   color: #ffffff;
-}
-
-.primary-button:hover {
-  transform: translateY(-2px);
-  background: var(--gold-dark);
 }
 
 .secondary-button {
   border: 1px solid var(--border);
   background: transparent;
 }
-
-.secondary-button:hover {
-  transform: translateY(-2px);
-  border-color: var(--gold);
-  color: var(--gold-dark);
-}
-
-/* =========================
-   COLLECTION
-========================= */
 
 .products-section {
   padding: 120px 24px;
@@ -175,7 +135,6 @@ input {
   margin: 18px 0 16px;
   font-size: clamp(34px, 5vw, 58px);
   line-height: 1.05;
-  letter-spacing: -0.035em;
   font-weight: 500;
 }
 
@@ -200,14 +159,6 @@ input {
   border: 1px solid var(--border);
   border-radius: 24px;
   overflow: hidden;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
 }
 
 .product-image {
@@ -216,54 +167,36 @@ input {
   align-items: center;
   justify-content: center;
   padding: 35px;
-  background:
-    radial-gradient(
-      circle,
-      rgba(181, 154, 98, 0.12),
-      transparent 65%
-    ),
-    #f3f0e9;
+  background: #f3f0e9;
 }
 
 .product-image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.35s ease;
-}
-
-.product-card:hover .product-image img {
-  transform: scale(1.035);
-}
-
-.product-content {
-  padding: 26px 26px 30px;
-}
-
-.product-label {
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: var(--gold-dark);
 }
 
 .product-card h3 {
-  margin: 12px 0 8px;
+  margin: 24px 26px 8px;
   font-size: 28px;
   font-weight: 500;
-  letter-spacing: -0.02em;
 }
 
 .product-card p {
-  margin: 0;
+  margin: 0 26px 30px;
   color: var(--muted);
   line-height: 1.7;
   font-size: 14px;
 }
 
-/* =========================
-   STANDARDS
-========================= */
+.product-label {
+  display: block;
+  margin: 26px 26px 0;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--gold-dark);
+}
 
 .standards-section {
   padding: 120px 24px;
@@ -283,14 +216,6 @@ input {
   border-top: 1px solid var(--border);
 }
 
-.standard-number {
-  margin-bottom: 34px;
-  color: var(--gold-dark);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-}
-
 .standard-card h3 {
   margin: 0 0 14px;
   font-size: 27px;
@@ -304,9 +229,12 @@ input {
   line-height: 1.8;
 }
 
-/* =========================
-   ABOUT
-========================= */
+.standard-number {
+  margin-bottom: 34px;
+  color: var(--gold-dark);
+  font-size: 12px;
+  font-weight: 700;
+}
 
 .about-section {
   padding: 140px 24px;
@@ -329,7 +257,6 @@ input {
   font-size: clamp(38px, 6vw, 66px);
   line-height: 1;
   font-weight: 500;
-  letter-spacing: -0.04em;
 }
 
 .about-content p {
@@ -340,10 +267,6 @@ input {
   font-size: 16px;
 }
 
-/* =========================
-   CONTACT
-========================= */
-
 .contact-section {
   padding: 120px 24px;
   text-align: center;
@@ -351,7 +274,8 @@ input {
 }
 
 .contact-logo {
-  width: min(150px, 45vw);
+  width: 150px;
+  max-width: 45vw;
   height: auto;
   margin-bottom: 35px;
 }
@@ -362,7 +286,6 @@ input {
   font-size: clamp(38px, 6vw, 64px);
   line-height: 1;
   font-weight: 500;
-  letter-spacing: -0.04em;
 }
 
 .contact-section p {
@@ -371,10 +294,6 @@ input {
   color: var(--muted);
   line-height: 1.8;
 }
-
-/* =========================
-   FOOTER
-========================= */
 
 .footer {
   padding: 50px 24px 35px;
@@ -401,11 +320,6 @@ input {
   font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
-  color: #ffffff;
 }
 
 .footer p {
@@ -414,31 +328,12 @@ input {
   font-size: 12px;
 }
 
-/* =========================
-   TABLET
-========================= */
-
 @media (max-width: 900px) {
   .product-grid,
   .standards-grid {
     grid-template-columns: 1fr 1fr;
   }
-
-  .product-card:last-child {
-    grid-column: 1 / -1;
-    max-width: 500px;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .hero {
-    min-height: 90vh;
-  }
 }
-
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 640px) {
   .hero {
@@ -447,24 +342,21 @@ input {
   }
 
   .logo {
-    width: min(180px, 60vw);
-    margin-bottom: 30px;
+    width: 180px;
   }
 
   .hero h1 {
-    font-size: clamp(40px, 12vw, 58px);
+    font-size: 42px;
   }
 
   .hero-text {
     font-size: 15px;
-    line-height: 1.7;
   }
 
   .hero-actions {
     width: 100%;
-    flex-direction: column;
-    align-items: stretch;
     max-width: 330px;
+    flex-direction: column;
   }
 
   .primary-button,
@@ -482,83 +374,25 @@ input {
     padding: 95px 20px;
   }
 
-  .section-heading {
-    margin-bottom: 42px;
-  }
-
-  .section-heading h2 {
-    font-size: 39px;
-  }
-
-  .section-heading p {
-    font-size: 15px;
-  }
-
   .product-grid,
   .standards-grid {
     grid-template-columns: 1fr;
   }
 
-  .product-card:last-child {
-    grid-column: auto;
-    max-width: none;
-  }
-
   .product-image {
     height: 350px;
-    padding: 30px;
-  }
-
-  .product-content {
-    padding: 24px;
   }
 
   .standard-card {
     padding: 30px 0;
   }
 
-  .about-content h2 {
-    font-size: 42px;
-  }
-
-  .about-content p {
-    font-size: 15px;
-  }
-
+  .about-content h2,
   .contact-section h2 {
     font-size: 42px;
-  }
-
-  .contact-section p {
-    font-size: 15px;
-  }
-
-  .footer {
-    padding: 45px 20px 30px;
   }
 
   .footer-links {
     gap: 20px;
   }
 }
-
-/* =========================
-   SMALL PHONES
-========================= */
-
-@media (max-width: 380px) {
-  .hero h1 {
-    font-size: 38px;
-  }
-
-  .section-heading h2,
-  .about-content h2,
-  .contact-section h2 {
-    font-size: 35px;
-  }
-
-  .product-image {
-    height: 300px;
-  }
-}
-```
