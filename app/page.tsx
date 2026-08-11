@@ -1,42 +1,7 @@
+```tsx
 "use client";
 
-import { FormEvent, useState } from "react";
-
 export default function Home() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState("");
-  const [loading, setLoading] = useState(false);
-
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
-    setStatus("");
-    setLoading(true);
-
-    try {
-      const response = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setStatus("success");
-        setEmail("");
-      } else {
-        setStatus(data.error || "Something went wrong.");
-      }
-    } catch {
-      setStatus("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-    }
-  }
-
   return (
     <main>
       <section className="hero">
@@ -49,35 +14,123 @@ export default function Home() {
         <h1>Precision. Quality. Aureon.</h1>
 
         <p>
-          Stay connected with Aureon. Subscribe for updates,
-          announcements, and exclusive news.
+          Discover Aureon — a premium brand built around
+          precision, quality, and excellence.
         </p>
 
-        <form onSubmit={handleSubmit} className="subscribe-form">
-          <input
-            type="email"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-            placeholder="Enter your email address"
-            required
-            aria-label="Email address"
-          />
+        <div className="hero-actions">
+          <a href="#products" className="primary-button">
+            Explore Aureon
+          </a>
 
-          <button type="submit" disabled={loading}>
-            {loading ? "Subscribing..." : "Subscribe"}
-          </button>
-        </form>
-
-        {status === "success" && (
-          <p className="success-message">
-            Thank you! You're subscribed.
-          </p>
-        )}
-
-        {status !== "" && status !== "success" && (
-          <p className="error-message">{status}</p>
-        )}
+          <a href="#contact" className="secondary-button">
+            Contact Us
+          </a>
+        </div>
       </section>
+
+      <section id="products" className="products-section">
+        <div className="section-heading">
+          <span>THE AUREON COLLECTION</span>
+          <h2>Precision in Every Detail</h2>
+          <p>
+            Explore the Aureon collection and discover our
+            commitment to premium presentation and quality.
+          </p>
+        </div>
+
+        <div className="product-grid">
+          <div className="product-card">
+            <img src="/Tirzera.png" alt="Tirzera" />
+            <h3>Tirzera</h3>
+            <p>Premium Aureon collection.</p>
+          </div>
+
+          <div className="product-card">
+            <img src="/Retera.png" alt="Retera" />
+            <h3>Retera</h3>
+            <p>Premium Aureon collection.</p>
+          </div>
+
+          <div className="product-card">
+            <img src="/Aura.png" alt="Aura" />
+            <h3>Aura</h3>
+            <p>Premium Aureon collection.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="standards-section">
+        <div className="section-heading">
+          <span>THE AUREON STANDARD</span>
+          <h2>Designed With Purpose</h2>
+          <p>
+            From presentation to experience, Aureon is built
+            around a refined and intentional approach.
+          </p>
+        </div>
+
+        <div className="standards-grid">
+          <div className="standard-card">
+            <h3>Precision</h3>
+            <p>
+              Every detail is carefully considered to create
+              a consistent premium experience.
+            </p>
+          </div>
+
+          <div className="standard-card">
+            <h3>Quality</h3>
+            <p>
+              We believe excellence begins with attention to
+              detail and uncompromising standards.
+            </p>
+          </div>
+
+          <div className="standard-card">
+            <h3>Excellence</h3>
+            <p>
+              Aureon represents a modern approach to premium
+              presentation and brand experience.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="contact-section">
+        <img
+          src="/aureon-logo.png"
+          alt="Aureon"
+          className="contact-logo"
+        />
+
+        <h2>Connect With Aureon</h2>
+
+        <p>
+          Have a question or want to learn more about Aureon?
+          Get in touch with our team.
+        </p>
+
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="primary-button"
+        >
+          Contact Aureon
+        </a>
+      </section>
+
+      <footer className="footer">
+        <img
+          src="/aureon-logo.png"
+          alt="Aureon"
+          className="footer-logo"
+        />
+
+        <p>© {new Date().getFullYear()} Aureon. All rights reserved.</p>
+      </footer>
     </main>
   );
 }
+```
