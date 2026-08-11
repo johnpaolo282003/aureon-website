@@ -1,11 +1,7 @@
 ```css
-@import "tailwindcss";
-
 :root {
   --background: #f8f7f4;
   --foreground: #171717;
-  --gold: #8b7350;
-  --gold-light: #c5aa7a;
 }
 
 * {
@@ -27,65 +23,49 @@ body {
   background:
     radial-gradient(
       circle at 15% 10%,
-      rgba(197, 170, 122, 0.12) 0,
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 85% 20%,
-      rgba(216, 199, 169, 0.14) 0,
+      rgba(197, 170, 122, 0.14),
       transparent 30%
     ),
     radial-gradient(
-      circle at 50% 85%,
-      rgba(197, 170, 122, 0.08) 0,
+      circle at 85% 20%,
+      rgba(216, 199, 169, 0.16),
       transparent 32%
     ),
     linear-gradient(
       135deg,
       #fbfaf7 0%,
-      #f8f7f4 45%,
+      #f8f7f4 50%,
       #f1eee8 100%
     );
 
   color: var(--foreground);
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 /* Premium subtle texture */
+
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.22;
+
+  opacity: 0.18;
 
   background-image:
     radial-gradient(
-      rgba(23, 23, 23, 0.16) 0.45px,
-      transparent 0.55px
-    ),
-    radial-gradient(
-      rgba(139, 115, 80, 0.12) 0.4px,
+      rgba(23, 23, 23, 0.18) 0.5px,
       transparent 0.5px
     );
 
-  background-size:
-    7px 7px,
-    11px 11px;
-
-  background-position:
-    0 0,
-    3px 4px;
+  background-size: 7px 7px;
 }
 
-/* Soft luxury light effect */
+/* Soft premium lighting */
+
 body::after {
   content: "";
   position: fixed;
@@ -94,14 +74,13 @@ body::after {
   pointer-events: none;
 
   background:
-    linear-gradient(
-      120deg,
-      transparent 0%,
-      rgba(255, 255, 255, 0.45) 45%,
-      transparent 70%
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255, 255, 255, 0.65),
+      transparent 45%
     );
 
-  opacity: 0.45;
+  opacity: 0.5;
 }
 
 a {
@@ -130,43 +109,17 @@ img {
   color: #171717;
 }
 
-/* Premium card texture */
-article,
-.standard-card {
-  position: relative;
-}
-
-article::after,
-.standard-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  border-radius: inherit;
-
-  background-image:
-    radial-gradient(
-      rgba(0, 0, 0, 0.06) 0.4px,
-      transparent 0.5px
-    );
-
-  background-size: 8px 8px;
-  opacity: 0.12;
-}
-
-/* Smooth scrolling sections */
 section {
   scroll-margin-top: 90px;
 }
 
-/* Better mobile spacing */
 @media (max-width: 640px) {
   body::before {
-    opacity: 0.16;
+    opacity: 0.12;
   }
 
   body::after {
-    opacity: 0.3;
+    opacity: 0.35;
   }
 }
 ```
